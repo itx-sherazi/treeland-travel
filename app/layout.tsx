@@ -3,6 +3,7 @@ import { Poppins, Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingButtons from "@/components/layout/FloatingButtons";
+import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -66,6 +67,26 @@ export const viewport = {
   themeColor: "#0f6b4b",
 };
 
+const travelAgencySchema = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  name: siteConfig.name,
+  url: siteUrl,
+  telephone: siteConfig.phone,
+  email: siteConfig.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.address,
+    addressCountry: "PK",
+  },
+  sameAs: [
+    siteConfig.social.facebook,
+    siteConfig.social.instagram,
+    siteConfig.social.tiktok,
+    siteConfig.social.youtube,
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -78,6 +99,10 @@ export default function RootLayout({
       style={{ colorScheme: "light" }}
     >
       <body className="flex min-h-full flex-col bg-white text-[#1f2937]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencySchema) }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

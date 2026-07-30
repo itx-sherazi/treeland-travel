@@ -2,10 +2,10 @@ export const siteConfig = {
   name: "Treeland Travel & Tours",
   shortDescription:
     "Trusted Hajj & Umrah travel partner from Pakistan, offering packages, visa assistance, flights, hotels and ground transport.",
-  phone: "+92 300 1234567",
-  phoneHref: "tel:+923001234567",
-  whatsapp: "+92 300 1234567",
-  whatsappHref: "https://wa.me/923001234567",
+  phone: "+92 332 7724742",
+  phoneHref: "tel:+923327724742",
+  whatsapp: "+92 332 7724742",
+  whatsappHref: "https://wa.me/923327724742",
   email: "info@treelandtravel.com",
   address: "Suite 4, Al-Barkat Plaza, Main Boulevard, Lahore, Pakistan",
   mapEmbedUrl:
