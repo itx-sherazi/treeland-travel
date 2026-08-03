@@ -19,7 +19,8 @@ export const metadata: Metadata = {
 };
 
 const infoItems = [
-  { icon: Phone, label: "Phone", value: siteConfig.phone, href: siteConfig.phoneHref },
+  { icon: Phone, label: "Tel", value: siteConfig.landline, href: siteConfig.landlineHref },
+  { icon: Phone, label: "Cell", value: siteConfig.phone, href: siteConfig.phoneHref },
   { icon: MessageCircle, label: "WhatsApp", value: siteConfig.whatsapp, href: siteConfig.whatsappHref },
   { icon: Mail, label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
   { icon: MapPin, label: "Office Address", value: siteConfig.address },

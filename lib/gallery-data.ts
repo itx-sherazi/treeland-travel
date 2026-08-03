@@ -7,7 +7,7 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   { id: "g1", src: "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=900&q=80", category: "Holy Places", alt: "Kaaba at Masjid al-Haram" },
-  { id: "g2", src: "https://images.unsplash.com/photo-1591604442566-5346926f4a7a?w=900&q=80", category: "Holy Places", alt: "Masjid al-Haram courtyard" },
+  { id: "g2", src: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=900&q=80", category: "Holy Places", alt: "Masjid al-Haram courtyard" },
   { id: "g3", src: "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=900&q=80", category: "Holy Places", alt: "Masjid Nabawi green dome" },
   { id: "g4", src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=900&q=80", category: "Hajj", alt: "Pilgrims performing Hajj" },
   { id: "g5", src: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?w=900&q=80", category: "Hajj", alt: "Hajj pilgrims gathering" },
@@ -23,7 +23,7 @@ export const galleryImages: GalleryImage[] = [
   { id: "g15", src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&q=80", category: "Office", alt: "Business team meeting" },
   { id: "g16", src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80", category: "Holy Places", alt: "Masjid al-Haram at night" },
   { id: "g17", src: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=900&q=80", category: "Umrah", alt: "Pilgrims performing Tawaf" },
-  { id: "g18", src: "https://images.unsplash.com/photo-1591186281883-425f2e2c5e35?w=900&q=80", category: "Hajj", alt: "Hajj tents at Mina" },
-  { id: "g19", src: "https://images.unsplash.com/photo-1590766940554-153fb0d0f8bd?w=900&q=80", category: "Hotels", alt: "Hotel room with view" },
+  { id: "g18", src: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=900&q=80", category: "Hajj", alt: "Hajj tents at Mina" },
+  { id: "g19", src: "https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=900&q=80", category: "Hotels", alt: "Hotel room with view" },
   { id: "g20", src: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&q=80", category: "Transportation", alt: "Airplane wing view" },
 ];

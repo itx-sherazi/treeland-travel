@@ -73,7 +73,11 @@ export default function Footer() {
           <ul className="mt-4 space-y-3">
             <li className="flex items-start gap-2.5 text-sm text-gray-600">
               <Phone size={16} className="mt-0.5 shrink-0 text-brand-green" />
-              <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
+              <a href={siteConfig.landlineHref}>Tel: {siteConfig.landline}</a>
+            </li>
+            <li className="flex items-start gap-2.5 text-sm text-gray-600">
+              <Phone size={16} className="mt-0.5 shrink-0 text-brand-green" />
+              <a href={siteConfig.phoneHref}>Cell: {siteConfig.phone}</a>
             </li>
             <li className="flex items-start gap-2.5 text-sm text-gray-600">
               <MessageCircle
@@ -122,18 +126,6 @@ export default function Footer() {
           </div>
         </div>
       </Container>
-
-      <div className="border-t border-gray-200">
-        <Container className="h-56 w-full overflow-hidden py-6 sm:h-64">
-          <iframe
-            title="Treeland Travel & Tours office location"
-            src={siteConfig.mapEmbedUrl}
-            className="h-full w-full rounded-xl border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </Container>
-      </div>
 
       <div className="border-t border-gray-200 py-5">
         <Container>

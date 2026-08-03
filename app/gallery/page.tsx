@@ -21,7 +21,7 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title="Moments Captured on the Journey"
         description="Explore photos from our pilgrims' Hajj and Umrah journeys."
-        image="https://images.unsplash.com/photo-1591604442566-5346926f4a7a?w=1920&q=80"
+        image="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=1920&q=80"
       />
 
       <section className="py-14 sm:py-20">

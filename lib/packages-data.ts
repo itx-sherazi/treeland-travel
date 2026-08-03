@@ -30,7 +30,7 @@ export const umrahPackages: Package[] = [
     priceValue: 145000,
     month: "Available Year-Round",
     image:
-      "https://images.unsplash.com/photo-1591604442566-5346926f4a7a?w=1200&q=80",
+      "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=1200&q=80",
     highlights: ["Return Flights", "3-Star Hotels", "Visa Processing", "Ziyarat Tour"],
     included: ["Return airfare", "Umrah visa", "3-star hotel (Makkah & Madinah)", "Shared transport", "Ziyarat tour"],
     notIncluded: ["Meals (except breakfast)", "Personal expenses", "Zamzam water excess baggage"],
