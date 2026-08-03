@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/site-config";
@@ -33,10 +34,15 @@ export default function Navbar() {
       }`}
     >
       <Container className="flex h-16 items-center justify-between sm:h-20">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-green text-base font-bold text-white sm:h-10 sm:w-10">
-            T
-          </span>
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image
+            src="/logo.jpeg"
+            alt="Treeland Travel & Tours"
+            width={44}
+            height={44}
+            priority
+            className="h-9 w-9 rounded-lg object-cover sm:h-11 sm:w-11"
+          />
           <span className="font-heading text-base font-bold tracking-tight text-[#1f2937] sm:text-lg">
             Treeland Travel
           </span>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, MessageCircle, Mail, MapPin, ShieldCheck } from "lucide-react";
 import {
   FacebookIcon,
@@ -13,10 +14,14 @@ export default function Footer() {
     <footer className="border-t border-gray-100 bg-brand-gray">
       <Container className="grid grid-cols-1 gap-10 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-4">
         <div>
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-green text-base font-bold text-white">
-              T
-            </span>
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image
+              src="/logo.jpeg"
+              alt="Treeland Travel & Tours"
+              width={44}
+              height={44}
+              className="h-10 w-10 rounded-lg object-cover"
+            />
             <span className="font-heading text-lg font-bold text-[#1f2937]">
               Treeland Travel
             </span>
