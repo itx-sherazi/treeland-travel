@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   CheckCircle2,
@@ -64,7 +63,12 @@ export default function PackageDetail({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <section className="relative h-64 w-full overflow-hidden sm:h-80 md:h-96">
-        <Image src={pkg.image} alt={pkg.name} fill priority className="object-cover" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={pkg.image}
+          alt={pkg.name}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <Container className="absolute inset-x-0 bottom-0 pb-8">
           <nav className="mb-2 text-xs text-white/80">

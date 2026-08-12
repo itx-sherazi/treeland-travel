@@ -1,19 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { galleryImages, type GalleryImage } from "@/lib/gallery-data";
 
-const categories = [
-  "All",
-  "Hajj",
-  "Umrah",
-  "Hotels",
-  "Transportation",
-  "Holy Places",
-  "Office",
-] as const;
+const categories = ["All", "Makkah", "Madinah", "Umrah Moments"] as const;
 
 export default function GalleryGrid() {
   const [category, setCategory] = useState<(typeof categories)[number]>("All");
@@ -74,12 +65,10 @@ export default function GalleryGrid() {
             onClick={() => openAt(img.id)}
             className="relative mb-3 block w-full overflow-hidden rounded-xl sm:mb-4"
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={img.src}
               alt={img.alt}
-              width={400}
-              height={400}
-              sizes="(max-width: 640px) 50vw, 25vw"
               className="w-full object-cover transition-transform duration-300 hover:scale-105"
             />
           </button>
@@ -116,12 +105,12 @@ export default function GalleryGrid() {
           >
             <ChevronRight size={22} />
           </button>
-          <div className="relative h-[70vh] w-full max-w-3xl">
-            <Image
+          <div className="relative flex h-[70vh] w-full max-w-3xl items-center justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={filtered[activeIndex].src}
               alt={filtered[activeIndex].alt}
-              fill
-              className="object-contain"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
         </div>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
@@ -13,7 +12,7 @@ export default function GalleryPreview() {
         <SectionHeading
           eyebrow="Gallery"
           title="Moments from the Journey"
-          description="A glimpse of the holy places, hotels and pilgrims we've served."
+          description="A glimpse of Makkah, Madinah and our pilgrims' Umrah moments."
         />
         <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-4 sm:gap-4">
           {preview.map((img) => (
@@ -21,12 +20,11 @@ export default function GalleryPreview() {
               key={img.id}
               className="relative aspect-square overflow-hidden rounded-xl"
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={img.src}
                 alt={img.alt}
-                fill
-                sizes="(max-width: 640px) 50vw, 25vw"
-                className="object-cover transition-transform duration-300 hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}

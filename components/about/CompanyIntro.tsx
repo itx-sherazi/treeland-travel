@@ -8,7 +8,7 @@ export default function CompanyIntro() {
       <Container className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
         <div className="relative h-72 overflow-hidden rounded-2xl sm:h-96">
           <Image
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=80"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqMa3bi1q6q082sMAI7oXi18fsJctXjtih371LB8D0FYp0v5M0Mgve1uUa&s=10"
             alt="Treeland Travel & Tours office"
             fill
             className="object-cover"

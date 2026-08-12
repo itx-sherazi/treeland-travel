@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Star, Clock, Bus } from "lucide-react";
 import type { Package } from "@/lib/packages-data";
 import Button from "@/components/ui/Button";
@@ -8,13 +7,12 @@ export default function PackageCard({ pkg }: { pkg: Package }) {
 
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md">
-      <div className="relative h-48 w-full sm:h-52">
-        <Image
+      <div className="relative h-48 w-full overflow-hidden sm:h-52">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={pkg.image}
           alt={pkg.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover"
+          className="h-full w-full object-cover"
         />
         <span className="absolute left-3 top-3 rounded-full bg-brand-green px-3 py-1 text-xs font-semibold text-white">
           {pkg.duration}

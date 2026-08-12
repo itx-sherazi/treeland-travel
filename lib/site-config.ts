@@ -29,14 +29,12 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Umrah Packages", href: "/umrah-packages" },
-  { label: "Hajj Packages", href: "/hajj-packages" },
   { label: "Gallery", href: "/gallery" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerServiceLinks = [
-  { label: "Hajj Packages", href: "/hajj-packages" },
   { label: "Umrah Packages", href: "/umrah-packages" },
   { label: "Visa Assistance", href: "/contact" },
   { label: "Flight Booking", href: "/contact" },

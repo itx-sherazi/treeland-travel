@@ -24,13 +24,13 @@ export default function Home() {
         viewAllHref="/umrah-packages"
         tinted
       />
-      <FeaturedPackages
+      {/* <FeaturedPackages
         eyebrow="Hajj Packages"
         title="Featured Hajj Packages"
         description="Government, private and VIP Hajj packages for the upcoming season."
         packages={hajjPackages}
         viewAllHref="/hajj-packages"
-      />
+      /> */}
       <BookingProcess />
       <Statistics />
       <Testimonials />
