@@ -28,7 +28,8 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Umrah Packages", href: "/umrah-packages" },
+  { label: "Umrah", href: "/umrah-packages" },
+  { label: "Holidays", href: "/holidays" },
   { label: "Gallery", href: "/gallery" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },

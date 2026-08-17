@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/umrah-packages",
     "/hajj-packages",
+    "/holidays",
     "/gallery",
     "/faq",
     "/contact",

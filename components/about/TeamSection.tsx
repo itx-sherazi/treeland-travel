@@ -3,10 +3,10 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const team = [
-  { name: "Imran Sheikh", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
-  { name: "Sana Malik", role: "Head of Operations", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
-  { name: "Usman Tariq", role: "Visa & Documentation Lead", image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&q=80" },
-  { name: "Hina Farooq", role: "Customer Relations Manager", image: "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?w=400&q=80" },
+  { name: "Salman Agha", role: "Director Accounts", image: "/salman-agha.jpeg" },
+  { name: "Amna Qadeer", role: "Manager Sales", image: "/amn-qadeer.jpeg" },
+  { name: "Kannal Aftab", role: "Int'l Sales", image: "/kannal-aftab.jpeg" },
+  { name: "Areeba Mansoor", role: "Manager Jeddah", image: "/areeba-mansoor.jpeg" },
 ];
 
 export default function TeamSection() {
