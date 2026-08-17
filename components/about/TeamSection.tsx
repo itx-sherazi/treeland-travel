@@ -5,8 +5,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 const team = [
   { name: "Salman Agha", role: "Director Accounts", image: "/salman-agha.jpeg" },
   { name: "Amna Qadeer", role: "Manager Sales", image: "/amn-qadeer.jpeg" },
-  { name: "Kannal Aftab", role: "Int'l Sales", image: "/kannal-aftab.jpeg" },
+  { name: "Kanwal Aftab", role: "Int'l Sales", image: "/kannal-aftab.jpeg" },
   { name: "Areeba Mansoor", role: "Manager Jeddah", image: "/areeba-mansoor.jpeg" },
+  { name: "Faaz Nadeem", role: "Office Boy", image: "/faaz.png" },
 ];
 
 export default function TeamSection() {
@@ -18,7 +19,7 @@ export default function TeamSection() {
           title="The People Behind Your Journey"
           description="A dedicated team committed to making your Hajj & Umrah experience seamless."
         />
-        <div className="mt-10 grid grid-cols-2 gap-5 sm:mt-12 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-5 sm:mt-12 sm:grid-cols-3 lg:grid-cols-5">
           {team.map((member) => (
             <div key={member.name} className="text-center">
               <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full sm:h-32 sm:w-32">
