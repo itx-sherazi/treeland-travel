@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MessageCircle, Users, FileCheck, Hotel, Plane } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -11,18 +14,39 @@ const infoItems = [
   { icon: Plane, label: "Flight Booking" },
 ];
 
+const heroSlides = [
+  { src: "/hero-makkah.png", alt: "Kaaba in Masjid al-Haram, Makkah" },
+  { src: "/hero-sydney.png", alt: "Sydney Harbour skyline" },
+  { src: "/hero-tropical.png", alt: "Tropical island holiday destination" },
+];
+
 export default function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4500);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-[#0a4d36]">
       <div className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1519817650390-64a93db51149?w=1920&q=80"
-          alt="Kaaba in Masjid al-Haram, Makkah"
-          fill
-          priority
-          className="object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a4d36]/90 via-[#0a4d36]/85 to-[#0a4d36]" />
+        {heroSlides.map((slide, i) => (
+          <Image
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            priority={i === 0}
+            className={`object-cover transition-opacity duration-1000 ease-in-out ${
+              i === activeSlide ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a4d36]/70 via-transparent to-transparent" />
       </div>
 
       <Container className="relative grid grid-cols-1 gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-28">
@@ -48,6 +72,20 @@ export default function Hero() {
             >
               WhatsApp Us
             </Button>
+          </div>
+
+          <div className="mt-7 flex justify-center gap-2 lg:justify-start">
+            {heroSlides.map((slide, i) => (
+              <button
+                key={slide.src}
+                type="button"
+                aria-label={`Show slide ${i + 1}`}
+                onClick={() => setActiveSlide(i)}
+                className={`h-1.5 rounded-full transition-all ${
+                  i === activeSlide ? "w-6 bg-brand-gold" : "w-1.5 bg-white/30"
+                }`}
+              />
+            ))}
           </div>
         </div>
 

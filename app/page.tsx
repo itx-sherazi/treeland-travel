@@ -4,7 +4,6 @@ import Services from "@/components/home/Services";
 import FeaturedPackages from "@/components/home/FeaturedPackages";
 import BookingProcess from "@/components/home/BookingProcess";
 import Statistics from "@/components/home/Statistics";
-import Testimonials from "@/components/home/Testimonials";
 import GalleryPreview from "@/components/home/GalleryPreview";
 import FaqPreview from "@/components/home/FaqPreview";
 import ContactCta from "@/components/home/ContactCta";
@@ -33,7 +32,6 @@ export default function Home() {
       /> */}
       <BookingProcess />
       <Statistics />
-      <Testimonials />
       <GalleryPreview />
       <FaqPreview />
       <ContactCta />
