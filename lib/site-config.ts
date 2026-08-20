@@ -22,7 +22,6 @@ export const siteConfig = {
     tiktok: "https://tiktok.com/@treelandtravel",
     youtube: "https://youtube.com/@treelandtravel",
   },
-  license: "Ministry of Religious Affairs Hajj License No. XXXX / IATA Registered",
 };
 
 export const navLinks = [

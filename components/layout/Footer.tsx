@@ -14,25 +14,19 @@ export default function Footer() {
     <footer className="border-t border-gray-100 bg-brand-gray">
       <Container className="grid grid-cols-1 gap-10 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-4">
         <div>
-          <Link href="/" className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center">
             <Image
-              src="/logo.jpeg"
+              src="/new-logo.jpeg"
               alt="Treeland Travel & Tours"
-              width={44}
-              height={44}
-              className="h-10 w-10 rounded-lg object-cover"
+              width={782}
+              height={354}
+              className="h-12 w-auto object-contain"
             />
-            <span className="font-heading text-lg font-bold text-[#1f2937]">
-              Treeland Travel
-            </span>
           </Link>
           <p className="mt-4 text-sm leading-6 text-gray-600">
             {siteConfig.shortDescription}
           </p>
-          <div className="mt-4 flex items-start gap-2 rounded-lg border border-brand-green/20 bg-white px-3 py-2 text-xs text-gray-600">
-            <ShieldCheck size={16} className="mt-0.5 shrink-0 text-brand-green" />
-            <span>{siteConfig.license}</span>
-          </div>
+         
         </div>
 
         <div>

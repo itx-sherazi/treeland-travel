@@ -27,25 +27,20 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b transition-colors ${
-        scrolled
-          ? "border-gray-200 bg-white/95 shadow-sm backdrop-blur"
-          : "border-transparent bg-white"
+      className={`sticky top-0 z-50 w-full border-b bg-white transition-colors ${
+        scrolled ? "border-gray-200 shadow-sm" : "border-transparent"
       }`}
     >
       <Container className="flex h-16 items-center justify-between sm:h-20">
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/logo.jpeg"
+            src="/new-logo.jpeg"
             alt="Treeland Travel & Tours"
-            width={44}
-            height={44}
+            width={782}
+            height={354}
             priority
-            className="h-9 w-9 rounded-lg object-cover sm:h-11 sm:w-11"
+            className="h-11 w-auto object-contain sm:h-14"
           />
-          <span className="font-heading text-base font-bold tracking-tight text-[#1f2937] sm:text-lg">
-            Treeland Travel
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">

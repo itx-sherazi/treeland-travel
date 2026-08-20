@@ -15,9 +15,30 @@ const infoItems = [
 ];
 
 const heroSlides = [
-  { src: "/hero-makkah.png", alt: "Kaaba in Masjid al-Haram, Makkah" },
-  { src: "/hero-sydney.png", alt: "Sydney Harbour skyline" },
-  { src: "/hero-tropical.png", alt: "Tropical island holiday destination" },
+  {
+    src: "/hero-makkah.png",
+    alt: "Kaaba in Masjid al-Haram, Makkah",
+    eyebrow: "Trusted Travel Partner",
+    title: "Perform Your Hajj & Umrah with Peace of Mind",
+    description:
+      "Professional Hajj and Umrah travel services from Pakistan — packages, visas, flights and hotels, handled end-to-end.",
+  },
+  {
+    src: "/hero-sydney.png",
+    alt: "Sydney Harbour skyline",
+    eyebrow: "Explore the World",
+    title: "Discover Iconic Destinations Worldwide",
+    description:
+      "From city breaks to international getaways, we plan every detail of your journey, wherever you want to go.",
+  },
+  {
+    src: "/hero-tropical.png",
+    alt: "Tropical island holiday destination",
+    eyebrow: "Holiday Packages",
+    title: "Escape to Paradise This Season",
+    description:
+      "Tropical beaches, island resorts and unforgettable holiday experiences — all planned around you.",
+  },
 ];
 
 export default function Hero() {
@@ -30,36 +51,39 @@ export default function Hero() {
     return () => clearInterval(id);
   }, []);
 
+  const slide = heroSlides[activeSlide];
+
   return (
     <section className="relative overflow-hidden bg-[#0a4d36]">
       <div className="absolute inset-0">
-        {heroSlides.map((slide, i) => (
+        {heroSlides.map((s, i) => (
           <Image
-            key={slide.src}
-            src={slide.src}
-            alt={slide.alt}
+            key={s.src}
+            src={s.src}
+            alt={s.alt}
             fill
             priority={i === 0}
-            className={`object-cover transition-opacity duration-1000 ease-in-out ${
+            className={`animate-kenburns object-cover transition-opacity duration-1000 ease-in-out ${
               i === activeSlide ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a4d36]/70 via-transparent to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
       </div>
 
       <Container className="relative grid grid-cols-1 gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-28">
-        <div className="text-center lg:text-left">
-          <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-brand-gold ring-1 ring-white/20 sm:text-sm">
-            Trusted Travel Partner
+        <div key={activeSlide} className="animate-hero-fade text-center lg:text-left">
+          <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-gold ring-1 ring-brand-gold/40 sm:text-sm">
+            {slide.eyebrow}
           </span>
-          <h1 className="mt-5 font-heading text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">
-            Perform Your Hajj &amp; Umrah with Peace of Mind
+          <h1 className="mt-5 font-heading text-3xl font-black leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl">
+            {slide.title}
           </h1>
-          <p className="mt-4 text-sm leading-6 text-white/80 sm:text-base sm:leading-7 md:text-lg">
-            Professional Hajj and Umrah travel services from Pakistan —
-            packages, visas, flights and hotels, handled end-to-end.
+          <span className="mx-auto mt-4 block h-1 w-16 rounded-full bg-brand-gold lg:mx-0" />
+          <p className="mt-4 text-sm leading-6 text-white/85 sm:text-base sm:leading-7 md:text-lg">
+            {slide.description}
           </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <Button href="/contact">Book Now</Button>
@@ -75,9 +99,9 @@ export default function Hero() {
           </div>
 
           <div className="mt-7 flex justify-center gap-2 lg:justify-start">
-            {heroSlides.map((slide, i) => (
+            {heroSlides.map((s, i) => (
               <button
-                key={slide.src}
+                key={s.src}
                 type="button"
                 aria-label={`Show slide ${i + 1}`}
                 onClick={() => setActiveSlide(i)}
@@ -93,9 +117,10 @@ export default function Hero() {
           {infoItems.map((item) => (
             <div
               key={item.label}
-              className="flex flex-col items-start gap-3 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur sm:p-5"
+              className="group relative flex flex-col items-start gap-3 overflow-hidden rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-5"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green">
+              <span className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-brand-gold transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green transition-colors duration-300 group-hover:bg-brand-green group-hover:text-white">
                 <item.icon size={20} />
               </span>
               <span className="text-sm font-semibold text-[#1f2937] sm:text-base">

@@ -7,7 +7,7 @@ const team = [
   { name: "Amna Qadeer", role: "Manager Sales", image: "/amn-qadeer.jpeg" },
   { name: "Kanwal Aftab", role: "Int'l Sales", image: "/kannal-aftab.jpeg" },
   { name: "Areeba Mansoor", role: "Manager Jeddah", image: "/areeba-mansoor.jpeg" },
-  { name: "Faaz Nadeem", role: "Office Boy", image: "/faaz.png" },
+  { name: "Faaz Nadeem", role: "Sales & Admin Executive", image: "/sales-man.png" },
 ];
 
 export default function TeamSection() {
